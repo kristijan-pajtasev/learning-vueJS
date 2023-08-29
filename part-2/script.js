@@ -1,3 +1,4 @@
+// script.js
 Vue.createApp({
   data() {
     return {
