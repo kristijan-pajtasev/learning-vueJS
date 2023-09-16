@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <div id="app">
+            <div>{{ "Hello world" }}</div>
+            <div>{{ 1 + 3 }}</div>
+            <div>{{ Math.round(3 + Math.random() * 5) }}</div>
+            <div>{{ (() => "Function result")() }}</div>
+            <div>{{ true ? "true expression" : "false expression" }}</div>
+            <div>{{message}}</div>
+            <div>{{arrayVariable}}</div>
+            <div>{{mapVariable}}</div>
+            <div>{{nestedVariable}}</div>
+            <div>{{getMessage()}}</div>
+            <div>{{getNameGreeting()}}</div>
+            <a v-bind:href="linkValue">Google</a>
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
