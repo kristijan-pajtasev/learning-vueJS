@@ -4,7 +4,11 @@
 <head></head>
 <body>
 <div id="app">
-
+    <ul>
+        <li v-for="person in people" >
+            <div>{{person.firstName}} {{person.lastName}} - {{person.dob}}</div>
+        </li>
+    </ul>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script type="text/javascript" src="script.js"></script>
