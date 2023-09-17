@@ -7,6 +7,16 @@
     <div v-if="probability >= 0.8">High probability</div>
     <div v-if="probability < 0.8 && probability >= 0.3">Medium probability</div>
     <div v-if="probability < 0.3">Low probability</div>
+
+    <template v-if="probability < 0.5">
+        <div>Element 1</div>
+        <div>Element 2</div>
+        <div>Element 3</div>
+    </template>
+
+    <div v-show="probability < 0.5">
+        Hidden text
+    </div>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script type="text/javascript" src="script.js"></script>
