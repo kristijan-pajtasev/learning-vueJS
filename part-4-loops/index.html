@@ -9,6 +9,20 @@
             <div>{{index}}. {{person.firstName}} {{person.lastName}} - {{person.dob}}</div>
         </li>
     </ul>
+
+    <!--    with if -->
+    <ul>
+        <li v-for="(person, index) in people" v-bind:key="person.id">
+            <div v-if="index % 2 === 0">{{index}}. {{person.firstName}} {{person.lastName}} - {{person.dob}}</div>
+        </li>
+    </ul>
+
+    <!--    range -->
+    <ul>
+        <li v-for="n in 10">
+            {{n}}
+        </li>
+    </ul>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script type="text/javascript" src="script.js"></script>
