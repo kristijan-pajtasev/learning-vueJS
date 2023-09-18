@@ -23,6 +23,13 @@
             {{n}}
         </li>
     </ul>
+
+    <!--    object -->
+    <ul>
+        <li v-for="(value, key, index) in person">
+            {{value}} {{key}} {{index}}
+        </li>
+    </ul>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script type="text/javascript" src="script.js"></script>

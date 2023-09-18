@@ -3,6 +3,12 @@ Vue.createApp(
   {
     data() {
       return {
+        person: {
+          id: 1,
+          firstName: "John",
+          lastName: "Doe",
+          dob: "01-01-1980"
+        },
         people: [
           {
             id: 1,
