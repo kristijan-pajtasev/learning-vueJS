@@ -14,6 +14,9 @@ Vue.createApp({
     },
     handleInput: function() {
       console.log("handle input")
-    }
+    },
+    logEvent: function($event) {
+      console.log("logEvent", $event)
+    },
   }
 }).mount("#app")

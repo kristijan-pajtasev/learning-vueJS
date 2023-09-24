@@ -12,15 +12,79 @@
     <div>
         <button type="button" @click.stop.prevent="function() { handleClick($event, 123) }">Click other me</button>
     </div>
+
+    <!--    function reference-->
     <div>
-        <button type="button" @click.stop.prevent="console.log('hello')">Click other me</button>
+        <button type="button" v-on:click.stop.prevent="handleClick">
+            Click me
+        </button>
     </div>
+
+    <!--    method call -->
     <div>
-        <button type="button" @click.stop.prevent="console.log('hello'); console.log('other hello'); if(true) {console.log('nother')}">Click other me</button>
+        <button type="button" v-on:click.stop.prevent="handleClick()">
+            Click me
+        </button>
     </div>
+
+    <!--    single function call -->
+    <div>
+        <button type="button" @click.stop.prevent="console.log('hello')">
+            Click other me
+        </button>
+    </div>
+
+    <!--    multiple functions call -->
+    <div>
+        <button type="button"
+                @click.stop.prevent="console.log('hello'); console.log('other hello'); if(true) { console.log('another') }">
+            Click other me
+        </button>
+    </div>
+
+    <!--    access to the event -->
+    <div>
+        <button type="button"
+                @click.stop.prevent="console.log($event);">
+            Console event
+        </button>
+    </div>
+
+    <!--    log event -->
+    <div>
+        <button type="button"
+                @click.stop.prevent="function($event) {logEvent($event)}">
+            Console event
+        </button>
+    </div>
+
+    <!--    log event -->
+    <div>
+        <button type="button"
+                @click.stop.prevent="logEvent($event, 'extra data')">
+            Console event
+        </button>
+    </div>
+
+    <!--    method call -->
+    <div>
+        <button type="button" v-on:click.stop.prevent.right="handleClick()">
+            Click me with right button
+        </button>
+    </div>
+
     <div>
         <div>input element</div>
-        <input v-on:input="handleInput" type="text" />
+        <input v-on:input="handleInput" type="text"/>
+    </div>
+
+    <div>
+        <div>input element</div>
+        <input v-on:input="handleInput"
+               v-on:click="console.log('click')"
+               v-on:keyup="console.log('key up event')"
+               v-on:keyup.enter="console.log('key up enter event')"
+               v-on:click.prevent.right="console.log('right click')" type="text"/>
     </div>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
