@@ -4,6 +4,8 @@
 <head></head>
 <body>
 <div id="app">
+    <button type="button" v-on:click.stop.prevent="handleClick">Click me</button>
+    <button type="button" v-on:click.stop.prevent="handleClick()">Click me</button>
     <div v-on:click="handleDivLink">
         <button type="button" v-on:click.stop.prevent="handleClick($event, 123)">Click me</button>
     </div>
@@ -16,7 +18,10 @@
     <div>
         <button type="button" @click.stop.prevent="console.log('hello'); console.log('other hello'); if(true) {console.log('nother')}">Click other me</button>
     </div>
-    <div v-for="(item, index) in list">{{item}} {{index}} <span v-if="item % 2 === 0">even</span></div>
+    <div>
+        <div>input element</div>
+        <input v-on:input="handleInput" type="text" />
+    </div>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script type="text/javascript" src="script.js"></script>

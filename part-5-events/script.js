@@ -11,6 +11,9 @@ Vue.createApp({
     },
     handleDivLink: function() {
       console.log("hello div world", arguments)
+    },
+    handleInput: function() {
+      console.log("handle input")
     }
   }
 }).mount("#app")
